@@ -3,6 +3,11 @@
   flex-direction: row;
 }
 
+body {
+  margin: 0;
+  padding-top: 1px;
+}
+
 .Home-gallery {
   display: flex;
   flex-wrap: wrap;
@@ -96,19 +101,27 @@
 
   .Home-gallery {
     display: block;
-    margin: 0 10px;
-    columns: 3 auto;
+    width: 90%;
+    margin: 0;
+    columns: 3 25vw;
+  }
+
+  .Home-gallery:after {
+    content: "";
+    display: block;
+    flex-grow: 0;
   }
 
   .Home-gallery li {
     height: auto;
+    margin: 0;
   }
 
-  .Home-gallery-img {
+  /* .Home-gallery-img {
     width: 100%;
     height: auto;
     object-fit: contain;
-  }
+  } */
 
   main {
     display: flex;
@@ -119,8 +132,16 @@
     width: 100%;
     height: auto;
     position: relative;
-    padding: 0 20px;
+    padding: 0;
     margin: 0;
+  }
+
+  .Nav-top {
+    padding-left: 20px;
+  }
+
+  .Nav-bottom {
+    padding-left: 20px;
   }
 
   .Page-gallery {
