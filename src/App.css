@@ -104,7 +104,7 @@ body {
     width: 90%;
     margin: auto;
     columns: 3 25vw;
-    padding-top: 25vh;
+    padding-top: 20vh;
   }
 
   .Home-gallery:after {
@@ -126,11 +126,12 @@ body {
 
   main {
     display: flex;
+    padding-top: 22vh;
   }
 
   .Nav {
     width: 100vw;
-    height: 25vh;
+    height: 22vh;
     padding: 0;
   }
 
@@ -147,14 +148,15 @@ body {
   }
 
   .Page-gallery {
-    padding-top: 25vh;
+    height: 78vh;
     margin: 0;
   }
   .Page-gallery li {
-    height: 75vh;
+    height: 78vh;
   }
 
   .Page-gallery-img {
     height: 100%;
+    object-fit: contain;
   }
 }
