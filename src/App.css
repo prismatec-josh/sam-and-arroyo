@@ -96,7 +96,7 @@ body {
 @media (max-width: 700px) {
   .App {
     flex-direction: column;
-    overflow-y: hidden;
+    height: 100vh;
   }
 
   .Home-gallery {
@@ -118,45 +118,38 @@ body {
     margin: 0;
   }
 
-  /* .Home-gallery-img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-  } */
-
   main {
     display: flex;
-    padding-top: 22vh;
   }
 
   .Nav {
     width: 100vw;
-    height: 22vh;
+    height: 20vh;
     padding: 0;
+    justify-content: space-evenly;
+    z-index: 1;
   }
 
   .Nav-top {
-    padding-top: 10px;
     padding-left: 20px;
     margin: 0;
   }
 
   .Nav-bottom {
-    padding-top: 10px;
     padding-left: 20px;
     margin: 0;
   }
 
   .Page-gallery {
-    height: 78vh;
     margin: 0;
+    padding-top: 20vh;
   }
   .Page-gallery li {
-    height: 78vh;
+    height: 55vh;
+    margin: 0 0 0 20px;
   }
 
   .Page-gallery-img {
-    height: 100%;
     object-fit: contain;
   }
 }
