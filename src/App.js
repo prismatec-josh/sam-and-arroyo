@@ -23,6 +23,11 @@ function App() {
                 hawaii
               </Link>
             </li>
+            <li className="Nav-item" key="manon">
+              <Link to="/manon" className="Nav-link">
+                manon
+              </Link>
+            </li>
           </ol>
           <ol className="Nav-bottom">
             <li className="Nav-item-bottom" key="instagram">
@@ -39,6 +44,9 @@ function App() {
           </Route>
           <Route exact path="/hawaii">
             <Page name="hawaii" key="hawaii" galleryType="Page" />
+          </Route>
+          <Route exact path="/manon">
+            <Page name="manon" key="manon" galleryType="Page" />
           </Route>
           <Route exact path="/">
             <Page name="home" key="home" galleryType="Home" />
