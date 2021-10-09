@@ -7,36 +7,47 @@ body {
   margin: 0;
 }
 
-.Home-gallery {
-  display: flex;
-  flex-wrap: wrap;
+.Gallery {
   list-style: none;
-  margin-left: 220px;
   padding: 0;
+  display: flex;
+  margin-left: 200px;
 }
 
-.Home-gallery:after {
-  content: "";
-  display: block;
-  flex-grow: 10;
-}
-
-.Home-gallery li {
-  height: 40vh;
-  flex-grow: 1;
-  margin: 5px;
-}
-
-.Home-gallery-img {
-  width: 100%;
+.Image-container {
   height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.Image-full-dialog {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100vw;
+  border: none;
+  position: fixed;
+  top: 0;
+  text-align: center;
+  padding: 0;
+  background-color: rgba(107, 107, 107, 0.75);
+  z-index: 1;
+}
+
+.Image-full-content {
+  object-fit: contain;
+  height: 100%;
+}
+
+.Image-small {
+  height: 91vh;
   object-fit: cover;
+  margin-right: 5px;
 }
 
 .Nav {
-  background-color: white;
   display: flex;
   flex-direction: column;
+  background-color: white;
   color: black;
   width: 200px;
   height: 100vh;
@@ -71,51 +82,43 @@ body {
   text-decoration: none;
 }
 
+.Nav-link-active {
+  text-decoration: underline;
+}
+
 .Nav-top {
   list-style: none;
   padding-left: 0;
-}
-
-.Page-gallery {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  margin-left: 200px;
-}
-
-.Page-gallery li {
-  height: 93vh;
-  margin-right: 5px;
-}
-
-.Page-gallery-img {
-  height: 100%;
-  object-fit: cover;
 }
 
 @media (max-width: 700px) {
   .App {
     flex-direction: column;
     height: 100vh;
+    overflow-y: hidden;
+  }
+  html {
+    overflow: hidden;
   }
 
-  .Home-gallery {
-    display: block;
-    width: 90%;
-    margin: auto;
-    columns: 3 25vw;
-    padding-top: 20vh;
-  }
-
-  .Home-gallery:after {
-    content: "";
-    display: block;
-    flex-grow: 0;
-  }
-
-  .Home-gallery li {
-    height: auto;
+  body {
+    overflow: hidden;
+    position: relative;
     margin: 0;
+    padding: 0;
+  }
+  .Gallery {
+    margin: 0 0 0 20px;
+    padding-top: 23vh;
+  }
+
+  .Image-container {
+    height: 50vh;
+  }
+
+  .Image-small {
+    height: 100%;
+    margin-right: 5px;
   }
 
   main {
@@ -138,18 +141,5 @@ body {
   .Nav-bottom {
     padding-left: 20px;
     margin: 0;
-  }
-
-  .Page-gallery {
-    margin: 0;
-    padding-top: 20vh;
-  }
-  .Page-gallery li {
-    height: 55vh;
-    margin: 0 0 0 20px;
-  }
-
-  .Page-gallery-img {
-    object-fit: contain;
   }
 }

@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
+import ImageComponent from "./ImageComponent";
 import axios from "axios";
 import xml2js from "xml2js";
 
 export default function Page(props) {
   const [pageImages, setPageImages] = useState(null);
   const [loading, setLoading] = useState(true);
-  const { name, galleryType } = props;
+  const { name } = props;
   const imgBaseUrl = "https://samandarroyo.sfo3.cdn.digitaloceanspaces.com";
   useEffect(() => {
     getImageList();
@@ -26,16 +27,11 @@ export default function Page(props) {
 
   return (
     <main>
-      <ol className={`${galleryType}-gallery`}>
+      <ol className={"Gallery"}>
         {pageImages.map((image) => {
           return (
             <li key={image}>
-              <img
-                className={`${galleryType}-gallery-img`}
-                src={`${imgBaseUrl}/${image}`}
-                alt="film photography portrait"
-                loading="lazy"
-              ></img>
+              <ImageComponent url={`${imgBaseUrl}/${image}`}></ImageComponent>
             </li>
           );
         })}

@@ -1,5 +1,11 @@
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  NavLink,
+} from "react-router-dom";
 import Page from "./Page";
 
 function App() {
@@ -14,19 +20,31 @@ function App() {
               </Link>
             </li>
             <li className="Nav-item" key="cait">
-              <Link to="/cait" className="Nav-link">
+              <NavLink
+                to="/cait"
+                className="Nav-link"
+                activeClassName="Nav-link-active"
+              >
                 cait
-              </Link>
+              </NavLink>
             </li>
             <li className="Nav-item" key="hawaii">
-              <Link to="/hawaii" className="Nav-link">
+              <NavLink
+                to="/hawaii"
+                className="Nav-link"
+                activeClassName="Nav-link-active"
+              >
                 hawaii
-              </Link>
+              </NavLink>
             </li>
             <li className="Nav-item" key="manon">
-              <Link to="/manon" className="Nav-link">
+              <NavLink
+                to="/manon"
+                className="Nav-link"
+                activeClassName="Nav-link-active"
+              >
                 manon
-              </Link>
+              </NavLink>
             </li>
           </ol>
           <ol className="Nav-bottom">
@@ -40,16 +58,16 @@ function App() {
 
         <Switch>
           <Route exact path="/cait">
-            <Page name="cait" key="cait" galleryType="Page" />
+            <Page name="cait" key="cait" />
           </Route>
           <Route exact path="/hawaii">
-            <Page name="hawaii" key="hawaii" galleryType="Page" />
+            <Page name="hawaii" key="hawaii" />
           </Route>
           <Route exact path="/manon">
-            <Page name="manon" key="manon" galleryType="Page" />
+            <Page name="manon" key="manon" />
           </Route>
           <Route exact path="/">
-            <Page name="home" key="home" galleryType="Home" />
+            <Page name="home" key="home" />
           </Route>
         </Switch>
       </div>
