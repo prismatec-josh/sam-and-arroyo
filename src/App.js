@@ -6,7 +6,7 @@ import {
   Link,
   NavLink,
 } from "react-router-dom";
-import Page from "./Page";
+import Gallery from "./Gallery";
 
 function App() {
   return (
@@ -58,16 +58,16 @@ function App() {
 
         <Switch>
           <Route exact path="/cait">
-            <Page name="cait" key="cait" />
+            <Gallery name="cait" key="cait" />
           </Route>
           <Route exact path="/hawaii">
-            <Page name="hawaii" key="hawaii" />
+            <Gallery name="hawaii" key="hawaii" />
           </Route>
           <Route exact path="/manon">
-            <Page name="manon" key="manon" />
+            <Gallery name="manon" key="manon" />
           </Route>
           <Route exact path="/">
-            <Page name="home" key="home" />
+            <Gallery name="home" key="home" />
           </Route>
         </Switch>
       </div>

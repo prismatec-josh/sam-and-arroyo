@@ -3,8 +3,8 @@ import ImageComponent from "./ImageComponent";
 import axios from "axios";
 import xml2js from "xml2js";
 
-export default function Page(props) {
-  const [pageImages, setPageImages] = useState(null);
+export default function Gallery(props) {
+  const [galleryImages, setGalleryImages] = useState(null);
   const [loading, setLoading] = useState(true);
   const { name } = props;
   const imgBaseUrl = "https://samandarroyo.sfo3.cdn.digitaloceanspaces.com";
@@ -19,7 +19,7 @@ export default function Page(props) {
       return i.Key[0];
     });
     const filter = new RegExp(name + "/.+");
-    setPageImages(urls.filter((url) => url.match(filter)));
+    setGalleryImages(urls.filter((url) => url.match(filter)));
     setLoading(false);
   }
 
@@ -28,7 +28,7 @@ export default function Page(props) {
   return (
     <main>
       <ol className={"Gallery"}>
-        {pageImages.map((image) => {
+        {galleryImages.map((image) => {
           return (
             <li key={image}>
               <ImageComponent url={`${imgBaseUrl}/${image}`}></ImageComponent>
