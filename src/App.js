@@ -7,6 +7,8 @@ import {
   NavLink,
 } from "react-router-dom";
 import Gallery from "./Gallery";
+import Home from "./Home";
+import Page from "./Page";
 
 function App() {
   return (
@@ -58,16 +60,22 @@ function App() {
 
         <Switch>
           <Route exact path="/cait">
-            <Gallery name="cait" key="cait" />
+            <Page>
+              <Gallery name="cait" key="cait" />
+            </Page>
           </Route>
           <Route exact path="/hawaii">
-            <Gallery name="hawaii" key="hawaii" />
+            <Page>
+              <Gallery name="hawaii" key="hawaii" />
+            </Page>
           </Route>
           <Route exact path="/manon">
-            <Gallery name="manon" key="manon" />
+            <Page>
+              <Gallery name="manon" key="manon" />
+            </Page>
           </Route>
           <Route exact path="/">
-            <Gallery name="home" key="home" />
+            <Home />
           </Route>
         </Switch>
       </div>
