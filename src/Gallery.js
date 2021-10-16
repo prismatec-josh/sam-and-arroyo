@@ -8,6 +8,7 @@ export default function Gallery(props) {
   const [loading, setLoading] = useState(true);
   const { name } = props;
   const imgBaseUrl = "https://samandarroyo.sfo3.cdn.digitaloceanspaces.com";
+
   useEffect(() => {
     getImageList();
   }, []);
@@ -29,14 +30,10 @@ export default function Gallery(props) {
   if (loading) return "Loading...";
 
   return (
-    <ol className={"Gallery"}>
+    <div className={"Gallery"}>
       {galleryImages.map((image) => {
-        return (
-          <li key={image}>
-            <ImageComponent url={`${imgBaseUrl}/${image}`}></ImageComponent>
-          </li>
-        );
+        return <ImageComponent url={`${imgBaseUrl}/${image}`}></ImageComponent>;
       })}
-    </ol>
+    </div>
   );
 }

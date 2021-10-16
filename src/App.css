@@ -1,6 +1,6 @@
 .App {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 body {
@@ -8,73 +8,62 @@ body {
 }
 
 .Gallery {
-  list-style: none;
-  padding: 0;
   display: flex;
-  margin-left: 200px;
+  height: 95%;
+}
+
+.Home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #acbda1;
+  height: 90vh;
+}
+
+.Home h1 {
+  margin: 0;
+  font-weight: normal;
+  font-size: 4rem;
+  width: 70%;
 }
 
 .Image-container {
-  height: 100%;
   padding: 0;
   margin: 0;
 }
 
-.Image-full-dialog {
-  box-sizing: border-box;
+.Image-element {
   height: 100%;
-  width: 100vw;
-  border: none;
-  position: fixed;
-  top: 0;
-  text-align: center;
-  padding: 0;
-  background-color: rgba(107, 107, 107, 0.75);
-  z-index: 1;
-}
-
-.Image-full-content {
   object-fit: contain;
-  height: 100%;
+  margin-right: 5px;
 }
 
-.Image-small {
-  height: 91vh;
-  object-fit: cover;
-  margin-right: 5px;
+main {
+  height: 88vh;
+  margin-top: 10vh;
+  width: 100%;
 }
 
 .Nav {
   display: flex;
-  flex-direction: column;
-  background-color: white;
-  color: black;
-  width: 200px;
-  height: 100vh;
-  position: fixed;
-  padding-left: 20px;
-  margin-top: 0;
-}
-
-.Nav-bottom {
+  flex-direction: row;
   list-style: none;
-  padding-left: 0;
+  position: fixed;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #acbda1;
+  color: black;
+  margin: 0;
+  padding: 0;
+  height: 10vh;
+  width: 100vw;
 }
 
-.Nav-home {
+.Nav-link-home {
   text-decoration: none;
   color: black;
   font-weight: 600;
   font-size: 1.5rem;
-}
-
-.Nav-item {
-  margin: 0.15rem 0;
-}
-
-.Nav-item-bottom a {
-  text-decoration: none;
-  color: black;
 }
 
 .Nav-link {
@@ -84,11 +73,6 @@ body {
 
 .Nav-link-active {
   text-decoration: underline;
-}
-
-.Nav-top {
-  list-style: none;
-  padding-left: 0;
 }
 
 @media (max-width: 700px) {
@@ -107,39 +91,36 @@ body {
     margin: 0;
     padding: 0;
   }
-  .Gallery {
-    margin: 0 0 0 20px;
-    padding-top: 23vh;
+
+  .Home {
+    align-items: unset;
+  }
+
+  .Home h1 {
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 3rem;
   }
 
   .Image-container {
-    height: 50vh;
+    height: 75vh;
   }
 
-  .Image-small {
+  .Image-element {
     height: 100%;
     margin-right: 5px;
   }
-
   main {
-    display: flex;
+    height: 88vh;
+    margin-top: 20vh;
+    width: 100%;
   }
-
   .Nav {
     width: 100vw;
     height: 20vh;
     padding: 0;
     justify-content: space-evenly;
     z-index: 1;
-  }
-
-  .Nav-top {
-    padding-left: 20px;
-    margin: 0;
-  }
-
-  .Nav-bottom {
-    padding-left: 20px;
-    margin: 0;
+    flex-direction: column;
   }
 }
