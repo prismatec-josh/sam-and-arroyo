@@ -6,7 +6,7 @@ export default function Nav() {
       <ul className="Nav">
         <li key="home">
           <Link to="/" className="Nav-link-home">
-            sam and arroyo
+            SAM AND ARROYO
           </Link>
         </li>
         <li className="Nav-item" key="cait">
@@ -15,7 +15,7 @@ export default function Nav() {
             className="Nav-link"
             activeClassName="Nav-link-active"
           >
-            cait
+            CAIT
           </NavLink>
         </li>
         <li className="Nav-item" key="hawaii">
@@ -24,7 +24,7 @@ export default function Nav() {
             className="Nav-link"
             activeClassName="Nav-link-active"
           >
-            hawaii
+            HAWAII
           </NavLink>
         </li>
         <li className="Nav-item" key="manon">
@@ -33,7 +33,7 @@ export default function Nav() {
             className="Nav-link"
             activeClassName="Nav-link-active"
           >
-            manon
+            MANON
           </NavLink>
         </li>
         <li className="Nav-item" key="instagram">
@@ -41,7 +41,7 @@ export default function Nav() {
             className="Nav-link"
             href="https://www.instagram.com/samandarroyo/"
           >
-            @samandarroyo
+            @SAMANDARROYO
           </a>
         </li>
       </ul>
