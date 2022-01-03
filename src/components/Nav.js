@@ -9,31 +9,22 @@ export default function Nav() {
             SAM AND ARROYO
           </Link>
         </li>
-        <li className="Nav-item" key="cait">
+        <li className="Nav-item" key="mamas">
           <NavLink
-            to="/cait"
+            to="/mamas"
             className="Nav-link"
             activeClassName="Nav-link-active"
           >
-            CAIT
+            MAMAS
           </NavLink>
         </li>
         <li className="Nav-item" key="hawaii">
           <NavLink
-            to="/hawaii"
+            to="/gallery/hawaii"
             className="Nav-link"
             activeClassName="Nav-link-active"
           >
             HAWAII
-          </NavLink>
-        </li>
-        <li className="Nav-item" key="manon">
-          <NavLink
-            to="/manon"
-            className="Nav-link"
-            activeClassName="Nav-link-active"
-          >
-            MANON
           </NavLink>
         </li>
         <li className="Nav-item" key="instagram">
