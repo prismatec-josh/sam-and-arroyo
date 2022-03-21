@@ -25,7 +25,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #acbda1;
+  background-color: #fcf4ea;
   height: 90vh;
 }
 
@@ -52,7 +52,7 @@ body {
 main {
   height: 90vh;
   margin-top: 10vh;
-  background-color: #acbda1;
+  background-color: #fcf4ea;
 }
 
 .Nav {
@@ -62,7 +62,7 @@ main {
   position: fixed;
   justify-content: space-around;
   align-items: center;
-  background-color: #acbda1;
+  background-color: #fcf4ea;
   color: black;
   margin: 0;
   padding: 0;
