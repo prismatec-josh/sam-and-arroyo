@@ -1,4 +1,5 @@
 import ImageComponent from "./ImageComponent";
+import Loading from "./Loading";
 import { imgBaseUrl } from "../constants";
 import { useParams } from "react-router-dom";
 
@@ -8,7 +9,7 @@ export default function Gallery() {
   const { loading, error, data } = useImageList();
   const { galleryName } = useParams();
 
-  if (loading) return "Loading...";
+  if (loading) return <Loading />;
   if (error) return "Sorry, it's broken...";
 
   const galleryImages = data.filter((url) => url.match(galleryName + "/.+"));

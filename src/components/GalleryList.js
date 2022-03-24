@@ -1,6 +1,7 @@
 import { useImageList } from "../hooks/useImageList";
 import { Link } from "react-router-dom";
 import ImageComponent from "./ImageComponent";
+import Loading from "./Loading";
 import { imgBaseUrl } from "../constants";
 
 export default function GalleryList(props) {
@@ -42,7 +43,7 @@ export default function GalleryList(props) {
 
   return (
     <div className={"Gallery"}>
-      {loading && <div>Loading</div>}
+      {loading && <Loading />}
       {error && <div>Error</div>}
       {data && !error && content}
     </div>
