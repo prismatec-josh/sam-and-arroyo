@@ -7,7 +7,6 @@ export default function ImageComponent(props) {
         src={url}
         className={"Image-element"}
         alt="film photography portrait"
-        loading="lazy"
       ></img>
     </div>
   );
