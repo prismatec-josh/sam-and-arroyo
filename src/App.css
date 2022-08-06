@@ -48,6 +48,9 @@ body {
   text-align: center;
 }
 
+.GalleryName:hover {
+  color: black;
+}
 .Home {
   display: flex;
   align-items: center;
