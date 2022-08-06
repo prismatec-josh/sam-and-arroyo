@@ -21,6 +21,32 @@ body {
   padding-left: 5px;
   -webkit-overflow-scrolling: touch;
 }
+.GalleryItem {
+  height: 100%;
+}
+
+.GalleryList {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: auto;
+  height: 100%;
+  padding-left: 5px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.GalleryListItem {
+  position: relative;
+  height: 100%;
+}
+
+.GalleryName {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+}
 
 .Home {
   display: flex;
@@ -41,7 +67,7 @@ body {
   padding: 0;
   margin: 0;
   flex: 0 0 auto;
-  height: 85vh;
+  height: 100%;
   flex-shrink: 0;
   scroll-snap-align: start;
 }
@@ -117,6 +143,19 @@ main {
     scroll-padding-left: 5px;
     scroll-snap-type: x mandatory;
   }
+
+  .GalleryItem {
+    height: 70%;
+  }
+
+  .GalleryList {
+    scroll-padding-left: 5px;
+    scroll-snap-type: x mandatory;
+  }
+
+  .GalleryListItem {
+    height: 70%;
+  }
   .Home {
     align-items: unset;
   }
@@ -128,7 +167,7 @@ main {
   }
 
   .Image-container {
-    height: 65vh;
+    height: 100%;
   }
 
   .Image-element {

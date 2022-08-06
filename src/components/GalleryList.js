@@ -27,13 +27,13 @@ export default function GalleryList(props) {
       //Grab the first image in the gallery to use as a cover pic
       const coverImage = images[1];
       return (
-        <div key={galleryName}>
+        <div className="GalleryListItem" key={galleryName}>
           {
             <Link to={`/gallery/${galleryName}`}>
               <ImageComponent
                 url={imgBaseUrl + "\\" + coverImage}
               ></ImageComponent>
-              <span>{galleryName}</span>
+              <div className="GalleryName">{galleryName}</div>
             </Link>
           }
         </div>
@@ -42,7 +42,7 @@ export default function GalleryList(props) {
   }
 
   return (
-    <div className={"Gallery"}>
+    <div className={"GalleryList"}>
       {loading && <Loading />}
       {error && <div>Error</div>}
       {data && !error && content}

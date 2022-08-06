@@ -18,10 +18,12 @@ export default function Gallery() {
     <div className={"Gallery"}>
       {galleryImages.map((image) => {
         return (
-          <ImageComponent
-            url={`${imgBaseUrl}/${image}`}
-            key={image}
-          ></ImageComponent>
+          <div className="GalleryItem">
+            <ImageComponent
+              url={`${imgBaseUrl}/${image}`}
+              key={image}
+            ></ImageComponent>
+          </div>
         );
       })}
     </div>
