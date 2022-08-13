@@ -27,6 +27,15 @@ export default function Nav() {
             HAWAII
           </NavLink>
         </li>
+        <li className="Nav-item" key="about">
+          <NavLink
+            to="/about"
+            className="Nav-link"
+            activeClassName="Nav-link-active"
+          >
+            ABOUT
+          </NavLink>
+        </li>
         <li className="Nav-item" key="instagram">
           <a
             className="Nav-link"

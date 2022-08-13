@@ -9,17 +9,42 @@ a {
   text-transform: capitalize;
 }
 
-body {
-  margin: 0;
+.About {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fcf4ea;
+  height: 90vh;
 }
 
-.Gallery {
+.About h1 {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: 300;
+  width: 70%;
+}
+
+body {
+  margin: 0;
+  background-color: #fcf4ea;
+}
+
+.Gallery-horizontal {
   display: flex;
   flex-wrap: nowrap;
   overflow: auto;
   height: 100%;
   padding-left: 5px;
   -webkit-overflow-scrolling: touch;
+}
+
+.Gallery-vertical {
+  display: flex;
+  flex-wrap: wrap;
+  height: 65%;
+  flex-grow: 1;
+  gap: 50px;
+  justify-content: center;
 }
 .GalleryItem {
   height: 99%;
@@ -61,7 +86,7 @@ body {
 
 .Home h1 {
   margin: 0;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 300;
   width: 70%;
 }
